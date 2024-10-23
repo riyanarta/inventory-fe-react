@@ -1,4 +1,4 @@
-import { Table, Form } from "react-bootstrap";
+import { Table, Form, Button, Row, Col } from "react-bootstrap";
 import Modals from "../components/modals";
 import { useState } from "react";
 const Items = () => {
@@ -210,8 +210,14 @@ const Items = () => {
           body={bodyModal()}
         />
       </div>
-
-      <Table responsive striped bordered hover>
+      <Row>
+        <Col xs={8}>
+          <h1>List of Items</h1>
+        </Col>
+        <Col xs={4}></Col>
+      </Row>
+      <hr></hr>
+      <Table responsive striped bordered hover className="my-5">
         <thead>
           <tr>
             <th>ID</th>
@@ -237,6 +243,12 @@ const Items = () => {
           ))}
         </tbody>
       </Table>
+
+      <div className="position-absolute">
+        <Button className="position-fixed bottom-0 end-0 mb-2 me-2">
+          Add New Item
+        </Button>
+      </div>
     </>
   );
 };
