@@ -4,17 +4,23 @@ import PropTypes from "prop-types";
 
 const Modals = ({ show, onClose, title, body }) => {
   return (
-    <Modal show={show} onHide={onClose}>
+    <Modal
+      show={show}
+      onHide={onClose}
+      backdrop="static"
+      keyboard={false}
+      centered
+    >
       <Modal.Header closeButton>
         <Modal.Title>{title}</Modal.Title>
       </Modal.Header>
       <Modal.Body>{body}</Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={onClose}>
-          Close
+        <Button variant="danger" onClick={onClose}>
+          Cancel
         </Button>
         <Button variant="primary" onClick={onClose}>
-          Save Changes
+          Add
         </Button>
       </Modal.Footer>
     </Modal>

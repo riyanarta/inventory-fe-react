@@ -1,0 +1,8 @@
+.no-wrap {
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+  overflow: hidden;
+  /* Hide overflow */
+  text-overflow: ellipsis;
+  /* Optional: Show ellipsis for overflowing text */
+}
